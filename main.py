@@ -89,3 +89,6 @@ async def get_query(query: ProductQuery):
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the FastAPI backend!"}
+@app.post("/query/")
+async def query_endpoint(data: dict):
+    return {"response": "Your query response"}
